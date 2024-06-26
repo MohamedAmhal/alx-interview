@@ -2,13 +2,15 @@
 """
 0-pascal_triangle
 """
+
+
 def pascal_triangle(n):
     """
     Generates Pascal's Triangle up to n rows.
 
-    Pascal's Triangle is a triangular array where each entry is the sum of the 
-    two entries directly above it. This function returns a list of lists, where 
-    each inner list represents a row of Pascal's Triangle. If n is less than or 
+    Pascal's Triangle is a triangular array where each entry is the sum of the
+    two entries directly above it.This function returns a list of lists, where
+    each inner list represents a row of Pascal's Triangle. If n is less than or
     equal to 0, the function returns an empty list.
 
     Parameters:
@@ -47,10 +49,9 @@ def pascal_triangle(n):
     b = [1, 1]
 
     # check the n number:
-    if (n <= 0) :
+    if (n <= 0):
         return (liste)
-    
-    else :
+    else:
         liste.append(a)
         liste.append(b)
         for i in range(2, n):
@@ -61,11 +62,4 @@ def pascal_triangle(n):
             a.append(1)
             liste.append(a)
             b = a
-        
         return (liste)
-
-
-
-
-            
-
