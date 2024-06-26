@@ -52,14 +52,17 @@ def pascal_triangle(n):
     if (n <= 0):
         return (liste)
     else:
-        liste.append(a)
-        liste.append(b)
-        for i in range(2, n):
-            a = []
-            a.append(1)
-            for j in range(1, i):
-                a.append(b[j] + b[j - 1])
-            a.append(1)
+        if (n == 1):
             liste.append(a)
-            b = a
+        else:
+            liste.append(a)
+            liste.append(b)
+            for i in range(2, n):
+                a = []
+                a.append(1)
+                for j in range(1, i):
+                    a.append(b[j] + b[j - 1])
+                a.append(1)
+                liste.append(a)
+                b = a
         return (liste)
