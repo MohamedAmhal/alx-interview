@@ -20,9 +20,12 @@ def canUnlockAll(boxes) :
                 break
         r = len(boxes[m])
         for j in range(r):
-            index = boxes[m][j]
-            if liste[index] == "NO" :
-                liste[index] = "YES"
+            try :
+                index = boxes[m][j]
+                if liste[index] == "NO" :
+                    liste[index] = "YES"
+            except :
+                continue
         liste[m] = "YES AND CHECKED !"
     for i in range(n):
         if liste[i] == "NO" :
