@@ -12,10 +12,10 @@ def canUnlockAll(boxes) :
     '''
     liste = []
     n = len(boxes)
-    
-    
+
+
     for i in range(n):
-        if i== 0:
+        if i == 0:
             liste.append("YES")
         else :
             liste.append("NO")
@@ -36,5 +36,5 @@ def canUnlockAll(boxes) :
     for i in range(n):
         if liste[i] == "NO" :
             return False
-            
+
     return True
