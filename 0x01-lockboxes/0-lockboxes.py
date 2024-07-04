@@ -3,7 +3,7 @@
 '''
 
 
-def canUnlockAll(boxes) :
+def canUnlockAll(boxes):
 
     '''
     this function to check the boxs!!
@@ -12,29 +12,27 @@ def canUnlockAll(boxes) :
     '''
     liste = []
     n = len(boxes)
-
-
     for i in range(n):
         if i == 0:
             liste.append("YES")
-        else :
+        else:
             liste.append("NO")
     while (liste.count("YES") != 0):
         for i in range(n):
-            if liste[i] == "YES" :
+            if liste[i] == "YES":
                 m = i
                 break
         r = len(boxes[m])
         for j in range(r):
-            try :
+            try:
                 index = boxes[m][j]
-                if liste[index] == "NO" :
+                if liste[index] == "NO":
                     liste[index] = "YES"
-            except :
+            except:
                 continue
         liste[m] = "YES AND CHECKED !"
     for i in range(n):
-        if liste[i] == "NO" :
+        if liste[i] == "NO":
             return False
 
     return True
