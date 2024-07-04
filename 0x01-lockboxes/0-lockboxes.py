@@ -1,12 +1,15 @@
 #!/usr/bin/python3
+'''A module for working with lockboxes.
+'''
+
 
 def canUnlockAll(boxes) :
 
-    """
+    '''
     this function to check the boxs!!
     parameters:
     @boxes : define a list to list for the box
-    """
+    '''
     liste = []
     n = len(boxes)
     if n == 1 :
