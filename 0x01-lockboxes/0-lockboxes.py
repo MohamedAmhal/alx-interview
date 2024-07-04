@@ -15,7 +15,7 @@ def canUnlockAll(boxes) :
     
     
     for i in range(n):
-        if i == 0:
+        if i== 0:
             liste.append("YES")
         else :
             liste.append("NO")
