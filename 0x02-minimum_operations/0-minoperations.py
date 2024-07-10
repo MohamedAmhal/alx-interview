@@ -40,17 +40,11 @@ def minOperations(n) -> int:
     else:
         n1 = n
         opermin = 0
-        while (True):
-            if (n1 % 2 == 0):
-                opermin += 2
-                n1 = n1 / 2
-            elif (n1 % 3 == 0):
-                opermin += 3
-                n1 = n1 / 3
-            elif (n1 == 1):
-                break
-            else:
-                opermin += n1
-                break
+        divisor = 2
+        while (n1 > 1):
+            while (n1 % divisor == 0):
+                opermin += divisor
+                n1 = n1 // divisor
+            divisor += 1
 
         return int(opermin)
