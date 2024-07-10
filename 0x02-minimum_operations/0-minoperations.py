@@ -38,11 +38,19 @@ def minOperations(n) -> int:
     elif (n == 2 or n == 3):
         return n
     else:
-        lilo = divisions(n)
-        vector = []
-        for i in lilo:
-            if i != n:
-                vector.append(int(i + (n / i)))
+        n1 = n
+        opermin = 0
+        while (True):
+            if (n1 % 2 == 0):
+                opermin += 2
+                n1 = n1 / 2
+            elif (n1 % 3 == 0):
+                opermin += 3
+                n1 = n1 / 3
+            elif (n1 == 1):
+                break
             else:
-                vector.append(int(n))
-        return minimum(vector)
+                opermin += n1
+                break
+
+        return int(opermin)
