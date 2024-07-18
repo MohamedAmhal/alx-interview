@@ -13,9 +13,9 @@ file_size = 0
 
 
 def functi():
-    print("File size: ", file_size)
     for k in dictio.keys():
-        print(k, ": ", dictio[k])
+        if dictio[k] != 0:
+            print(k, ": ", dictio[k])
 
 
 try:
@@ -40,7 +40,8 @@ try:
 
         if line_counter == 10:
             line_counter = 0
+            print("File size: ", file_size)
             functi()
-except KeyboardInterrupt:
+finally:
+    print("File size: ", file_size)
     functi()
-    sys.exit(0)
