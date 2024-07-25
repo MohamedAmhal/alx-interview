@@ -46,8 +46,6 @@ def validUTF8(data):
             return True
         else:
             return False
-    if (lis[0] > 5):
-        return False
     for i in range(len(lis) - 1):
         if (lis[i] == (lis[i + 1] + 1)):
             pass
