@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+'''
+doc doc doc dc dki
+dnjfkfkf
+fjflkgn
+'''
+
+
 def bits(a):
     '''
     doc doc doc dc dki
