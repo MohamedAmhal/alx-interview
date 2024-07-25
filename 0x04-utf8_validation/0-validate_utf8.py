@@ -34,7 +34,6 @@ def validUTF8(data):
         if (data[i] < 0):
             return False
         a = bits(data[i])
-        print(a)
         comp = 0
         for j in a:
             if int(j) == 1:
@@ -59,7 +58,6 @@ def validUTF8(data):
                 if (data[i] < 0):
                     return False
                 b = bits(data[i])
-                print(b)
                 if (int(b[0]) == 1 and int(b[1]) == 0):
                     i = i + 1
                 else:
