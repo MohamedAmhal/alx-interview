@@ -41,6 +41,11 @@ def validUTF8(data):
         lis.append(comp)
         comp = 0
     bol = 0
+    if (len(lis) == 1):
+        if (lis[0] == 0):
+            return True
+        else:
+            return False
     for i in range(len(lis) - 1):
         if (lis[i] == (lis[i + 1] + 1)):
             pass
