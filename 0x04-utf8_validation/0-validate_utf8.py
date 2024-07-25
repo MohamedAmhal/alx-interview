@@ -29,8 +29,6 @@ def validUTF8(data):
     dnjfkfkf
     fjflkgn
     '''
-    if (len(data) == 0):
-        return False
     i = 0
     while(i < len(data)):
         a = bits(data[i])
