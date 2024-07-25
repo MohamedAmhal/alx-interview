@@ -29,32 +29,34 @@ def validUTF8(data):
     dnjfkfkf
     fjflkgn
     '''
-    lis = []
-    for i in range(len(data)):
-        comp = 0
+    i = 0
+    while(i < len(data)):
         a = bits(data[i])
+        comp = 0
         for j in a:
             if int(j) == 1:
                 comp += 1
             else:
                 break
-        lis.append(comp)
-        comp = 0
-    bol = 0
-    if (len(lis) == 1):
-        if (lis[0] == 0):
-            return True
-        else:
-            return False
-    for i in range(len(lis) - 1):
-        if (lis[i] == (lis[i + 1] + 1)):
-            pass
-        elif (lis[i] == lis[i + 1]):
-            pass
-        else:
-            bol = 1
 
-    if (bol == 0):
-        return True
-    else:
-        return False
+        if (len(data) == 1 and comp == 1):
+            return False
+        if (comp == 0):
+            i = i + 1
+            continue
+        elif (comp == 1):
+            return False
+        if (comp > 4):
+            return False
+        else:
+            i = i + 1
+            for j in range(comp - 1):
+                if (i >= len(data)):
+                    return False
+                b = bits(data[i])
+                if (int(b[0]) == 1 and int(b[1]) == 0):
+                    i = i + 1
+                else:
+                    return False
+
+    return True
