@@ -30,33 +30,33 @@ def validUTF8(data):
     fjflkgn
     '''
     lis = []
-
     for i in range(len(data)):
-            comp = 0
-            a = bits(data[i])
-            for j in a:
-                if int(j) == 1:
-                    comp += 1
-                else:
-                    break
-            lis.append(comp)
-            comp = 0
+        comp = 0
+        a = bits(data[i])
+        for j in a:
+            if int(j) == 1:
+                comp += 1
+            else:
+                break
+        lis.append(comp)
+        comp = 0
+    bol = 0
     if (len(lis) == 1):
         if (lis[0] == 0):
             return True
         else:
             return False
-    num = lis[0]
-    if (num > 5):
+    if (lis[0] > 5):
         return False
-    else:
-        for i in range(1, len(lis)):
-            if(lis[i] == 1):
-                num -= 1
-            else:
-                break
-
-        if (num == 1):
-            return True
+    for i in range(len(lis) - 1):
+        if (lis[i] == (lis[i + 1] + 1)):
+            pass
+        elif (lis[i] == lis[i + 1]):
+            pass
         else:
-            return False
+            bol = 1
+
+    if (bol == 0):
+        return True
+    else:
+        return False
