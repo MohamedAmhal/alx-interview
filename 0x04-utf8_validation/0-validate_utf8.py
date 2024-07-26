@@ -19,6 +19,8 @@ def bits(a):
 
     while(len(b) < 8):
         b = '0' + b
+    while(len(b) > 8):
+        b = b[1:]
 
     return b
 
